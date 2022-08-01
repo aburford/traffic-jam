@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Problem-Solving Exercise</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<script src="nouislider.min.js"></script>
+	<link rel="stylesheet" href="nouislider.min.css">
+	<script type="module" src="game.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div id="rules-modal" class="modal">
+		<div class="modal-content">
+			<h4>Rules</h4>
+			<ul>
+				<li>- Only 1 person allowed per space (no sharing)</li>
+				<li>- There will always be 1 space that is not occupied</li>
+				<li>- Only 1 person can move at a time</li>
+				<li>- You can only move forward to the empty space</li>
+				<li>- You can only pass/go around 1 person of the opposite team</li>
+				<li>- You can't pass/go around a member of your team</li>
+				<li>- You can't move backwards</li>
+			</ul>
+		</div>
+		<div class="modal-footer">
+			<a href="#!" class="modal-close waves-effect waves-light btn">Close</a>
+		</div>
+	</div>
+	<div class="nav-bar ">
+		<span class="nav-title">Problem-Solving Exercise: Traffic Jam</span>
+		<div class="nav-left">
+			<img src="logo.svg" height="80%">
+		</div>
+		<div class="nav-right">
+			<a class="waves-effect waves-light btn modal-trigger" href="#rules-modal"><span>Rules</span></a>
+		</div>
+	</div>
+	<div id="game-screen">
+		<div id="cards-wrapper" class="row-container">
+			<div id="cards-row">
+			</div>
+		</div>
+		<div id="game-controls">
+			<span id="info" class="control-text">Drag a figure to begin</span>
+			<p>
+				<label id="tips-control">
+					<input id="tips" type="checkbox" />
+					<span id="tips-checkbox" class="control-text"></span>
+					<span id="tips-text" class="control-text">Tips?</span>
+				</label>
+			</p>
+			<!-- <div class="switch">
+				<label class="switch">
+					Tips?
+					<input type="checkbox">
+					<span class="slider round"></span>
+				</label>
+			</div> -->
+			<div>
+				<a id="restart" class="waves-effect waves-light btn control-text">Restart</a>
+			</div>
+			<div>
+				<div id="team-size-slider"></div>
+			</div>
+			<div></div>
+		</div>
+	</div>
+</body>
+
+</html>

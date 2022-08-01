@@ -1,0 +1,342 @@
+:root {
+  --blue: #1d3a8b;
+  --lightblue: #304fa3;
+  --orange: #c68406; 
+  --lightorange: #d69724;
+}
+
+body {
+	margin: 0;
+	font-size: 4vh;
+}
+
+.mc-blue {
+	background-color: var(--blue);
+}
+
+.mc-blue.card:hover:not([draggable=false]) {
+	background-color: var(--lightblue);
+}
+
+.mc-orange {
+	background-color: var(--orange);
+}
+
+.mc-orange:hover:not([draggable=false]) {
+	background-color: var(--lightorange);
+}
+
+.nav-bar {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	height: 10vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.nav-title {
+	/*font-size: 1.2em;*/
+	font-size: 3.5vw;
+}
+
+.nav-left {
+	position: absolute;
+	left: 10px;
+	top: 0px; bottom: 0px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.nav-right {
+	position: absolute;
+	right: 10px;
+	top: 0px;
+	bottom: 0px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.btn {
+	text-transform: none;
+	font-size: 1em;
+	border-radius: 1vh;
+	border-width: 2px;
+	border-color: var(--blue);
+	border-style: solid;
+	background: none;
+	color: var(--blue);
+	height: 1.5em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+}
+
+.btn:hover {
+	background: none;
+	border-color: var(--lightblue);
+	color: var(--lightblue);
+	box-shadow: none;
+	-webkit-box-shadow: none;
+}
+
+.btn.disabled {
+	background-color: #fff !important;
+	border-color: #9F9F9F;
+}
+
+.modal-content {
+	padding-bottom: 0px !important;
+	font-size:0.8em;
+}
+
+.modal-content h4 {
+	font-size: 1.5em;
+}
+
+.modal .modal-footer {
+	margin: 10px 0px;
+	paddin: 0px 10px;
+	height: 1.5em;
+	padding-top: 0px;
+}
+
+.modal .modal-footer .btn {
+	margin: 0;
+}
+
+ul {
+	margin-bottom: 0px;
+}
+
+#game-screen {
+	position: absolute;
+	overflow: hidden;
+	top: 10vh;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#cards-wrapper {
+	flex: 1;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#cards-row {
+	height: 80%;
+	/*width: 100%;*/
+	/*margin-top: 20%;*/
+	/*flex: 1;*/
+	/*padding-top: 10%;*/
+	/*padding-bottom: 10%;*/
+	margin-left: 5px;
+	margin-right: 5px;
+	display: flex;
+	flex-direction: row;
+}
+
+.slot-container {
+	user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	flex: 1;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.slot {
+	height: 100%;
+	position: relative;
+}
+
+.ellipse {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	aspect-ratio: 2;
+}
+
+.ellipse.over {
+	stroke-dasharray: 5,5;
+}
+
+.card {
+	background-color: transparent;
+	box-shadow: none;
+	position: relative;
+	user-select: none;
+	height: 100%;
+	margin: 0px;
+	border-radius: 10px;
+	text-align: center;
+	/*font-size: 300%;*/
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+	transition: opacity 0.8s;
+	transition: background-color 0.3s;
+}
+
+.card[draggable=true] {
+	/*opacity: 1;*/
+}
+
+.card path {
+	transition: fill 0.3s;
+}
+
+.left-label {
+	color: var(--blue);
+}
+
+.card:hover>.left-label {
+	color: var(--lightblue);
+}
+
+.left-human {
+	fill: var(--blue);
+}
+
+.card:hover .left-human {
+	fill: var(--lightblue);
+}
+
+.right-label {
+	color: var(--orange);
+}
+
+.card:hover>.right-label {
+	color: var(--lightorange);
+}
+
+.right-human {
+	fill: var(--orange);
+}
+
+.card:hover .right-human {
+	fill: var(--lightorange);
+}
+
+.card-text {
+	transition: color 0.3s;
+	border: 2px solid;
+	width: 1em;
+	font-size: 0.8em;
+	margin-bottom: 0.2em;
+}
+
+.slot-label {
+	text-align: center;
+	margin-block-start: 0;
+	margin-block-end: 0;
+}
+
+[draggable=true] {
+	cursor: move;
+}
+
+#game-controls {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#game-controls>* {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	flex: 1;
+}
+
+.control-text {
+	font-size: 4vh !important;
+	color: var(--blue);
+}
+
+.noUi-target {
+	width: 80vw;
+	height: 0.8em;
+	border-color: var(--blue);
+}
+
+.noUi-marker {
+	background: var(--blue);
+}
+
+.noUi-value {
+	color: var(--blue);
+}
+
+#team-size-slider .noUi-handle {
+	height: 1em;
+	width: 1em;
+	top: -0.1em;
+	right: -0.5em;
+	box-shadow: none;
+	background: var(--blue);
+	border: 1px solid #000;
+	border-radius: 0.2em;
+	transition: 0.3s;
+}
+
+#team-size-slider .noUi-handle:before {
+	content: none;
+}
+
+#team-size-slider .noUi-handle:after {
+	content: none;
+}
+
+#team-size-slider[disabled=true] .noUi-handle {
+	background-color: #9F9F9F;
+}
+
+#team-size-slider[disabled=false] .noUi-value {
+	cursor: pointer;
+}
+
+#tips-control {
+	visibility: hidden;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+}
+
+/*I have not idea why this works but it aligns it properly on both desktop and mobile*/
+#tips-checkbox {
+	padding-left: 1.2em;
+}
+
+[type="checkbox"]:checked+span:not(.lever):before {
+	border-right: 2px solid var(--blue);
+	border-bottom: 2px solid var(--blue);
+	height: 0.9em;
+	width: 0.5em;
+}
+
+[type="checkbox"]+span:not(.lever):before {
+	border: 2px solid var(--blue);
+	height: 0.8em;
+	width: 0.8em;
+	margin-top: 0px;
+}
+
+#tips-text {
+	line-height: 0.8em;
+}
