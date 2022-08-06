@@ -1,4 +1,5 @@
 import {htmlToNode} from './helper.js'
+import {getHuman} from './silhuoettes.js'
 export default class Card {
 	constructor(teamSize, name, leftTeam, dragCallback, dragEndCallback) {
 		this.name = name
@@ -15,6 +16,7 @@ export default class Card {
 				</svg>
 			</div>
 		</div>`
+		html = getHuman(name, leftTeam)
 		this.node = htmlToNode(html)
 		this.node.addEventListener('dragstart', this.dragStart.bind(this), false)
 		this.node.addEventListener('dragend', this.dragEnd.bind(this), false)
