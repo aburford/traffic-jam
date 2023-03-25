@@ -3,9 +3,6 @@ import { htmlToNode, randomInt } from './helper.js'
 
 document.addEventListener('DOMContentLoaded', loaded);
 
-const blue = '#1d3a8b'
-const orange = '#c68406'
-
 function loaded() {
 	M.AutoInit();
 	let g = new Game(5)
@@ -104,8 +101,8 @@ class Game {
 		if (done) {
 			if (lost) {
 				// might want to make these less demeaning lol
-				let short = ["That didn't last long", "Well that was short", "You must be a rookie", "Don't quit your day job"]
-				let long = ["So close yet so far", "I thought you had it but clearly not", "At least you made <i>some</i> progress"]
+				let short = ["That didn't last long!", "Well, that was short.", "You must be a rookie.", "Don't quit your day job yet..."]
+				let long = ["So close, yet so far...", "I thought you had it, but clearly not.", "At least you made <i>some</i> progress."]
 				let phrases = this.moves > 6 ? long : short
 				let i = randomInt(0, phrases.length - 1)
 				this.info.innerHTML = "You're out of moves! " + phrases[i]
