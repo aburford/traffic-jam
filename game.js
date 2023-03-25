@@ -56,7 +56,8 @@ class Game {
 				this.currentCode = [...this.konami]
 			}
 		} else if (this.currentCode.length == 0) {
-			document.getElementById('tips-control').style.visibility = 'visible'
+			//document.getElementById('tips-control').style.visibility = 'visible'
+			console.log('Konami!')
 		}
 	}
 
